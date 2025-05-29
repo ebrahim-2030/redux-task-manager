@@ -40,7 +40,7 @@ const TaskList = () => {
     if (editingTask?.id === id) setEditingTask(null);
   };
   return (
-    <div className="max-w-lg mx-auto px-8 pt-12 pb-8 bg-white rounded shadow-sm  ">
+    <div className="w-full max-w-lg mx-auto px-8 pt-12 pb-8 bg-white rounded shadow-sm  ">
       {/* filter controls */}
       <FilterButtons
         currentFilter={filter}
