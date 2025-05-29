@@ -10,7 +10,7 @@ const initialState = {
 // define tasks slice
 const tasksSlice = createSlice({
   // slice name
-  name: tasks,
+  name: "tasks",
 
   // initial state
   initialState,

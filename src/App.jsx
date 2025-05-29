@@ -1,9 +1,10 @@
 import React from "react";
+import TaskForm from "./components/TaskForm";
 
 const App = () => {
   return (
     <div>
-      <h1 className="text-3xl font-bold underline text-blue-500">Redux Task Manager</h1>
+      <TaskForm />
     </div>
   );
 };
