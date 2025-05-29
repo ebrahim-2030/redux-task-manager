@@ -1,10 +1,15 @@
 import React, { useEffect, useState } from "react";
+
+// task statuses
 const statuses = ["todo", "in-progress", "completed"];
 
+// TaskForm handles creating and editing tasks
 const TaskForm = ({ onSubmit, existingTask, onCancel }) => {
+  // state for task text and task status
   const [text, setText] = useState("");
   const [status, setStatus] = useState("todo");
 
+  // if editing an existing task, populate fields
   useEffect(() => {
     if (existingTask) {
       setText(existingTask.text);
@@ -12,9 +17,11 @@ const TaskForm = ({ onSubmit, existingTask, onCancel }) => {
     }
   }, [existingTask]);
 
+  //   handle form submision
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    // only submit if text is not empty
     if (text.trim()) {
       onSubmit({ text, status, id: existingTask?.id });
       setText("");
