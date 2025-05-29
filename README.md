@@ -1,4 +1,4 @@
-# redux-task-manager
+# Redux Task Manager
 
 A React task manager built with Redux Toolkit and Tailwind CSS that supports full CRUD operations (Create, Read, Update, Delete). Manage tasks with status categories (todo, in progress, completed), filter tasks by status, edit tasks, and keep your data persistent using localStorage.
 
@@ -24,7 +24,7 @@ Check out the live version of the app here:
 
 ## 🧑‍💻 Getting Started
 
-### 1. Clone the repository
+### Clone the repository
 
 ```bash
 git clone https://github.com/ebrahim-2030/redux-task-manager
