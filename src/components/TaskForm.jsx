@@ -35,7 +35,7 @@ const TaskForm = ({ onSubmit, existingTask, onCancel }) => {
         placeholder="Add a new Task..."
         value={text}
         onChange={(e) => setText(e.target.value)}
-        className="border p-2 rounded focus:outline-none focus:ring-2 focus:ring-indigo-500"
+        className="border border-black/5 p-2 placeholder:text-sm rounded focus:outline-none focus:ring-1 focus:ring-blue-500"
         required
       />
 
@@ -43,10 +43,10 @@ const TaskForm = ({ onSubmit, existingTask, onCancel }) => {
         name="status"
         value={status}
         onChange={(e) => setStatus(e.target.value)}
-        className="border p-2 rounded focus:outline-none focus:ring-2 focus:ring-indigo-500"
+        className="border border-black/5 p-2 rounded focus:outline-none focus:ring-1 focus:ring-blue-500"
       >
         {statuses.map((s) => (
-          <option key={s} value={s}>
+          <option key={s} value={s} className="">
             {s.charAt().toUpperCase() + s.slice(1).replace("-", " ")}
           </option>
         ))}
@@ -54,7 +54,7 @@ const TaskForm = ({ onSubmit, existingTask, onCancel }) => {
 
       <div className="flex gap-2">
         <button
-          className="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700"
+          className="bg-blue-500 text-white px-4 py-1 rounded hover:bg-blue-600"
           type="submit"
         >
           {existingTask ? "Update" : "Add"}
@@ -63,7 +63,7 @@ const TaskForm = ({ onSubmit, existingTask, onCancel }) => {
           <button
             type="button"
             onClick={onCancel}
-            className="bg-gray-300 px-4 py-2 rounded hover:bg-gray-400"
+            className="bg-red-500 px-4 py-1 text-white rounded hover:bg-red-600"
           >
             Cancel
           </button>

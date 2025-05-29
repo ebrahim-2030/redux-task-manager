@@ -10,15 +10,15 @@ const filters = [
 
 const FilterButtons = ({ currentFilter, onChange }) => {
   return (
-    <div className="flex gap-2 mb-4">
+    <div className="flex gap-2 mb-4 flex-wrap">
       {filters.map((filter) => (
         <button
           key={filter.key}
           onClick={() => onChange(filter.key)}
-          className={`px-4 py-2 rounded ${
+          className={`md:flex-1 px-4 py-1 text-sm font-medium rounded ${
             currentFilter === filter.key
-              ? "bg-indigo-600 text-white"
-              : "bg-gray-200 hover:bg-gray-300"
+              ? "bg-black/70 text-white"
+              : "bg-black/5 hover:bg-black/10 text-black/40"
           }`}
         >
           {filter.label}

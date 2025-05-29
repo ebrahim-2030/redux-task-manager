@@ -40,7 +40,7 @@ const TaskList = () => {
     if (editingTask?.id === id) setEditingTask(null);
   };
   return (
-    <div className="max-w-lg mx-auto p-4">
+    <div className="max-w-lg mx-auto px-8 pt-12 pb-8 bg-white rounded shadow-sm  ">
       {/* filter controls */}
       <FilterButtons
         currentFilter={filter}
@@ -59,7 +59,8 @@ const TaskList = () => {
       )}
 
       {/* tasks list */}
-      <div className="mt-4 border rounded">
+      <h2 className="mt-8 text-md font-medium text-black/70 border-t pt-5 border-black/5"  >Your Tasks </h2>
+      <div className="mt-4 border border-black/5 rounded">
         {filteredTasks.length === 0 && (
           <p className="p-4 text-center text-gray-500">No tasks found.</p>
         )}
