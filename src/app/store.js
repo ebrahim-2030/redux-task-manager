@@ -6,7 +6,7 @@ import { loadState, saveState } from "../utils/localStorage";
 const persistedState = loadState();
 
 // create redux store with tasks reducer and preload state
-const store = configureStore({
+export const store = configureStore({
   reducer: {
     tasks: tasksReducer,
   },
