@@ -40,7 +40,7 @@ const tasksSlice = createSlice({
       const task = state.items.find((t) => t.id === id);
 
       if (task) {
-        (task.text = text), (task.state = status);
+        (task.text = text), (task.status = status);
       }
     },
 
